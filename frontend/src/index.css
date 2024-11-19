@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 滚动条样式：浮动而不占据宽度 */
+
+
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  user-select: none;
+}
+
+.happy-monkey-regular {
+  font-family: "Happy Monkey", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.price-list-container {
+  background-color: #20c997;
+  /* 设置背景颜色与主题一致 */
+  color: white;
+  /* 设置文本颜色为白色 */
+  border-radius: 8px;
+  /* 圆角 */
+  padding: 2rem;
+  /* 内边距 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* 添加阴影效果 */
+}
+
+.price-list-container table {
+  width: 100%;
+  /* 设置表格宽度为100% */
+  border-collapse: collapse;
+  /* 合并表格边框 */
+  table-layout: fixed;
+  /* 固定表格布局 */
+}
+
+.price-list-container th,
+.price-list-container td {
+  padding: 1rem;
+  /* 单元格内边距 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /* 下边框 */
+  width: 33.33%;
+  /* 每列宽度均等，三等分 */
+  text-align: center;
+  /* 文本居中对齐 */
+}
+
+.price-list-container th {
+  text-transform: uppercase;
+  /* 标题文字大写 */
+}
+
+.price-list-container tr:hover td {
+  transform: translateY(-5px);
+  /* 鼠标悬停时向上移动 */
+  transition: transform 0.3s ease;
+  /* 平滑过渡动画 */
+  cursor: pointer;
+  /* 鼠标悬停时显示手形指针 */
+}
+
+.comment-card {
+  margin: 0 10px;
+  /* 设置每个卡片之间的间距 */
+  text-align: left;
+  position: relative;
+
+}
+
+
+.read-more-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  /* 控制按钮透明度的渐变效果 */
+  position: absolute;
+  bottom: 10px;
+  /* 调整按钮在卡片中的位置 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.comment-card:hover .read-more-btn {
+  opacity: 1;
+  /* 当鼠标悬停在卡片上时，按钮变得完全可见 */
+}
+
+.content {
+  width: 100%;
+  height: 400px;
+  padding: 100px 0 0 120px;
+
+
+}
+
+.mflow-box {
+  width: 200px;
+  height: 120px;
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+  background-color: black;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.mflow-box::before {
+  content: "";
+  /* width: calc(100%-10px);
+  height: calc(100%-10px); */
+  width: 400px;
+  height: 300px;
+  background-color: #000000;
+  border-radius: 20px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: -1;
+}
+
+.mflow-box::after {
+  content: "";
+  width: 300%;
+  height: 300%;
+  background-color: antiquewhite;
+  background-image: conic-gradient(#EEEEEE22, #6D8552, #EEEEEE22 30%);
+  border-radius: 20px;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  z-index: -2;
+  /* animation: rotate-border 5s linear infinite; */
+}
+
+@keyframes rotate-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
