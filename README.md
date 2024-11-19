@@ -25,8 +25,8 @@ Follow these steps to get the project running locally:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git](https://github.com/RugeeFan/Chingu-Solo-Project.git
-cd <your-repo-name>
+git clone https://github.com/RugeeFan/Chingu-Solo-Project.git
+cd Chingu-Solo-Project
 ```
 
 ### 2. Create a `.env` File
